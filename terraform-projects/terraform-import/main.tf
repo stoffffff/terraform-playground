@@ -11,6 +11,9 @@ resource "aws_instance" "jade-mw" {
   ami           = "ami-082b3eca746b12a89"
   instance_type = "t2.large"
   key_name      = "jade"
+  tags = {
+    Name = "jade-mw"
+  }
 }
 output "instances" {
   value = aws_instance.ruby
