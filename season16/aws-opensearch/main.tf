@@ -1,17 +1,9 @@
-resource "aws_cloudsearch_domain" "domain" {
-  name = "sr-domain"
+resource "aws_opensearch_domain" "search" {
+  domain_name = "sr-domain"
 
-  scaling_parameters {
-    desired_instance_type = "search.medium"
-  }
+  engine_version = "OpenSearch_2.11"
 
-  index_field {
-    name            = "headline"
-    type            = "text"
-    search          = true
-    return          = true
-    sort            = true
-    highlight       = false
-    analysis_scheme = "_en_default_"
+  cluster_config {
+    instance_type = "t3.small.search"
   }
 }
