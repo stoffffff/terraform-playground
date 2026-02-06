@@ -4,9 +4,8 @@ metadata:
   name: terraform-playground
   description: Terraform things.
   # Example for optional annotations
-  # annotations:
-  #   github.com/project-slug: backstage/backstage
-  #   backstage.io/techdocs-ref: dir:.
+  annotations:
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: terraform
   owner: platform-engineering
